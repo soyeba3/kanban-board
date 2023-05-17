@@ -1,7 +1,16 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import AddTask from "./components/addTask/AddTask";
 import TodoList from "./components/todo/TodoList";
+import { setTodos } from "./features/todosSlice";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setTodos());
+  }, []);
+
   return (
     <div className="h-screen w-full flex items-center justify-center">
       <div className="flex flex-col gap-5 items-center h-[83%] w-4/6 bg-gray-200 rounded-md p-4 my-8">

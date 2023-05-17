@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../features/todosSlice";
+import { v4 as uuidv4 } from 'uuid';
 
 const AddTask = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const AddTask = () => {
     e.preventDefault();
     dispatch(
       addTodo({
-        id: 1,
+        id: uuidv4(), // Generate Unique Id
         name: input,
         status: "todos",
       })
