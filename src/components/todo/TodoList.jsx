@@ -5,7 +5,7 @@ import Todos from "./Todos";
 
 const TodoList = () => {
   return (
-    <div className="flex gap-6 h-full">
+    <div className="flex overflow-hidden gap-6 h-full">
       <Todos />
       <Inprogress />
       <Completed />

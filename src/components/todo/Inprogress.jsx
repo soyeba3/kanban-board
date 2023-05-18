@@ -21,7 +21,7 @@ const Inprogress = () => {
   };
 
   return (
-    <div className="w-1/3 flex flex-col border-[1px] border-solid border-black">
+    <div className="w-1/3 overflow-y-scroll no-scrollbar flex flex-col border-[1px] border-solid border-black">
       <div className="text-center text-gray-700 font-bold bg-[#FF6347] border-b-[1px] border-black">
         In Progress
       </div>
