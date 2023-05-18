@@ -7,8 +7,10 @@ import { setTodos } from "./features/todosSlice";
 function App() {
   const dispatch = useDispatch();
 
+  //Persist the data after reload
   useEffect(() => {
     dispatch(setTodos());
+    //eslint-disable-next-line
   }, []);
 
   return (

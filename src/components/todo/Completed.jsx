@@ -5,6 +5,7 @@ const Completed = () => {
   const { todos } = useSelector((state) => state.todos) || [];
   const dispatch = useDispatch();
 
+  //For drag and drop functionality
   const drag = (e, id) => {
     e.dataTransfer.setData("todoId", id);
   };
@@ -19,7 +20,7 @@ const Completed = () => {
     e.preventDefault();
   };
   return (
-    <div className="w-1/3 border-[1px] border-solid border-black">
+    <div className="w-1/3 h-full border-[1px] border-solid border-black">
       <div className="text-center text-gray-700 font-bold bg-[#FF6347] border-b-[1px] border-black">
         Completed
       </div>

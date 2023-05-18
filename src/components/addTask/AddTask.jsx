@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 import { addTodo } from "../../features/todosSlice";
-import { v4 as uuidv4 } from 'uuid';
 
 const AddTask = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,12 @@ const AddTask = () => {
   // Handler Funtion
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    //Check Input Validation
+    if (input.length < 3) {
+      return alert("Text must be minimum 3 characters");
+    }
+
     dispatch(
       addTodo({
         id: uuidv4(), // Generate Unique Id
@@ -17,6 +23,8 @@ const AddTask = () => {
         status: "todos",
       })
     );
+
+    //Blank the input field after add a task
     setInput("");
   };
 

@@ -5,6 +5,7 @@ const Todos = () => {
   const { todos } = useSelector((state) => state.todos) || [];
   const dispatch = useDispatch();
 
+  //For drag and drop functionality
   const drag = (e, id) => {
     e.dataTransfer.setData("todoId", id);
   };
