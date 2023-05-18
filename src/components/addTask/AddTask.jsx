@@ -38,7 +38,7 @@ const AddTask = () => {
         onChange={(e) => setInput(e.target.value)}
       />
       <button
-        className="border-solid border-[1px] border-black hover:bg-[#FF6347] hover:text-white hover:border-[#FF6347] transition duration-300 px-4 py-1 text-[#FF6347] "
+        className="border-solid border-[1px] border-black hover:bg-[#FF6347] hover:text-white hover:border-[#FF6347] transition duration-300 px-4 py-1 text-[#FF6347] font-bold bg-white"
         type="submit"
       >
         Add

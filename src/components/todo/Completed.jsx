@@ -19,15 +19,16 @@ const Completed = () => {
   const allowDrop = (e) => {
     e.preventDefault();
   };
+
   return (
-    <div className="w-1/3 h-full border-[1px] border-solid border-black">
+    <div className="w-1/3 flex flex-col border-[1px] border-solid border-black">
       <div className="text-center text-gray-700 font-bold bg-[#FF6347] border-b-[1px] border-black">
-        Completed
+        Done
       </div>
       <div
         onDrop={(e) => drop(e)}
         onDragOver={(e) => allowDrop(e)}
-        className="m-2 h-full flex flex-col gap-2"
+        className="h-full bg-white p-2 flex flex-col gap-2"
       >
         {todos
           ?.filter((t) => t.status === "completed")
@@ -36,7 +37,7 @@ const Completed = () => {
               draggable
               onDragStart={(e) => drag(e, todo.id)}
               key={todo.id}
-              className="bg-gray-400 text-center"
+              className="bg-gray-300 border-[1px] border-black text-center"
             >
               {todo.name}
             </div>
